@@ -9,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class MyServlet
@@ -41,26 +40,13 @@ public class MyServlet extends HttpServlet {
 		out.append("<p>PathInfo: "+pathInfo+"</p>");
 		out.append("<p>test: "+test+"</p>");
 		out.append("<p>toto: "+toto+"</p>");
-		out.append("<h2>Header Values</h2>");
+		out.append("<p>Header Values</p>");
 		
 		Enumeration headerNames=request.getHeaderNames();
 		while(headerNames.hasMoreElements()) {
 			String headerName=(String)headerNames.nextElement();
 			String headerValue = request.getHeader(headerName);
 			out.append(String.format("<p>Header: %s, valeur: %s", headerName,headerValue));
-		}
-		
-		out.append("<h2>Session</h2>");
-		HttpSession session = (HttpSession)request.getSession();
-		String first="John"; String last="Doe";
-		session.setAttribute("firstname", first);
-		session.setAttribute("lastname", last);
-		
-		Enumeration ee = session.getAttributeNames();
-		while (ee.hasMoreElements()) {
-			String attr = (String) ee.nextElement();
-			String tmp = (String) session.getAttribute(attr);
-			out.append("<p>"+attr+": "+tmp+"</p>");
 		}
 	}
 
