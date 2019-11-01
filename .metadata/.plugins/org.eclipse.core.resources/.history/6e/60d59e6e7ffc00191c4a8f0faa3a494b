@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class MyServlet
  */
-@WebServlet(name="MyServlet",urlPatterns = "/param")
+@WebServlet("/MyServlet")
 public class MyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,17 +28,8 @@ public class MyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String contextPath=request.getContextPath();
-		String servletPath=request.getServletPath();
-		String pathInfo = request.getPathInfo();
-		String test=request.getParameter("test");
-		String toto=request.getParameter("toto");
 		PrintWriter out = response.getWriter();
-		out.append("<p>ContextPath: "+contextPath+"</p>");
-		out.append("<p>ServletPath: "+servletPath+"</p>");
-		out.append("<p>PathInfo: "+pathInfo+"</p>");
-		out.append("<p>test: "+test+"</p>");
-		out.append("<p>toto: "+toto+"</p>");
+		out.append("<p>Hello World!</p>");
 	}
 
 	/**
