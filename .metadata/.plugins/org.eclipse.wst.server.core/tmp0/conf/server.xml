@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MyWebTest01" path="/MyWebTest01" reloadable="true" source="org.eclipse.jst.jee.server:MyWebTest01"/><Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MyServlet" path="/MyServlet" reloadable="true" source="org.eclipse.jst.jee.server:MyServlet"/></Host>
+      <Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MyWebTest01" path="/MyWebTest01" reloadable="true" source="org.eclipse.jst.jee.server:MyWebTest01"/><Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MyServlet" path="/MyServlet" reloadable="true" source="org.eclipse.jst.jee.server:MyServlet"/><Context docBase="/home/javaee/dev/STS-WS/gc-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MySpringMVC1" path="/example" reloadable="true" source="org.eclipse.jst.jee.server:MySpringMVC1"/></Host>
     </Engine>
   </Service>
 </Server>
