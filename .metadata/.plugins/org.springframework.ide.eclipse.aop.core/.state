@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="Etudiants"/>
+<aop-project name="Produit"/>
 <aop-project name="MySpringMVC1"/>
 <aop-project name="MySpringBootProject1"/>
+<aop-project name="Greetings"/>
+<aop-project name="SpringEx1"/>
+<aop-project name="SpringJPA"/>
 </aop-reference-model>

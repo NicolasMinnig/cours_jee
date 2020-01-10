@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+<div th:each="name: ${names}">
+<p th:if="${name[0]}=='N'" th:text="'Greatings '+${name}+'!'" />
+<p th:unless="${name[0]}=='N'" th:text="'Hello '+${name}+'!'" />
+</div>
+</body>
+</html>

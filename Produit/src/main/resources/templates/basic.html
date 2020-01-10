@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<!--<head th:insert="fragments/fragments.html :: header"/>-->
+	
+	<body>
+		
+		<!--<div th:replace="fragments/fragments.html :: navigation"></div>-->
+		
+		<div class="container">
+			<div class="starter-template">
+				
+				<div class="card">
+				  <div class="card-header">
+				    Products
+				  </div>
+				  <div class="card-body">
+				    <table class="table">
+				    <thead>
+					    <tr>
+					      <th scope="col">Name</th>
+					      <th scope="col">Price</th>
+					      <th scope="col">Supplier</th>
+					    </tr>
+					  </thead>
+				    <tbody>
+					    <tr th:each="product: ${products}">
+					        <td th:text="${product.name}" />
+					        <td th:text="${product.price}" />
+					        <td th:text="${product.supplier}" />
+					    </tr>
+					</tbody>
+					</table>
+				  </div>
+				</div>
+				
+			</div>
+	
+		</div>
+		
+	</body>
+</html>

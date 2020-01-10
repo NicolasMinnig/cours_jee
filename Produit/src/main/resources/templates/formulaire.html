@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<!--<head th:insert="fragments/fragments.html :: header"/>-->
+	
+	<body>
+		
+		<!--<div th:replace="fragments/fragments.html :: navigation"></div>-->
+		
+		<div class="container">
+	
+			<div class="starter-template">
+				<h1>Formulaire</h1>
+				
+				<div class="card">
+				  <div class="card-header">
+				    Exemple th:text
+				  </div>
+				  <div class="card-body">
+				    <form action="#" th:action="@{/product}" th:object="${produit}" method="post">
+					     <div class="form-group">
+					    	<label for="name" th:text="#{produit.name}" /></label>
+					    	<input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Product name">
+					    	<small id="nomHelp" class="form-text text-muted">Insert product's name here</small>
+					    </div>
+					    
+					    <div class="form-group">
+					    	<label for="price" th:text="#{produit.price}" /></label>
+					    	<input type="number" th:field="*{age}" class="form-control" id="age" placeholder="Age de l'étudiant">
+					    	<small id="ageHelp" class="form-text text-muted">Insérez l'age de l'étudiant</small>
+					    </div>
+					    
+					    <div class="form-group">
+					    	<label for="sexe" th:text="#{etudiant.sexe}" /></label>
+					    	<select class="form-control" id="sexe" th:field="*{sexe}">
+						      <option value="M">Masculin</option>
+						      <option value="F">Féminin</option>
+						    </select>
+					    	<small id="sexHelp" class="form-text text-muted">Insérez le sexe de l'étudiant</small>
+					    </div>
+					    
+					   
+						  
+					   <button type="submit" class="btn btn-primary">Submit</button>
+						  
+					</form>
+
+				</div>
+				
+			</div>
+	
+		</div>
+		</div>
+		
+		<!--<div th:replace="fragments/fragments.html :: scripts"></div>-->
+		
+	</body>
+</html>
