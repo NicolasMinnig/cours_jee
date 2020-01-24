@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+	</head>
+	<body>
+		<table>
+		<thead>
+		</thead>
+		<tbody>
+			<tr >
+				<td>Prenom:</td>
+				<td th:text="${person.first}"></td>
+			</tr>
+			<tr ">
+				<td>Nom:</td>
+				<td th:text="${person.last}"></td>
+			</tr>
+			<tr ">
+				<td>Age:</td>
+				<td th:text="${age}"></td>
+			</tr>
+		</tbody>
+		</table>
+	</body>
+
+</html>

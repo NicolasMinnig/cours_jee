@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<!--<head th:insert="fragments/fragments.html :: header"/>-->
+	
+	<body>
+		
+		<!--<div th:replace="fragments/fragments.html :: navigation"></div>-->
+		
+		<div class="container">
+	
+			<div class="starter-template">
+				<h1>Nouvel étudiant</h1>
+				
+				<div class="card">
+				  <div class="card-body">
+				    <form th:action="@{/classe/insert}" th:object="${classe}" method="post">
+					    
+					    <div class="form-group">
+					    	<label for="nom" />Nom</label>
+					    	<input type="text" th:field="*{nom}" class="form-control" id="nom" placeholder="Nom de la classe">
+					    	<small id="nomHelp" class="form-text text-muted">Insérez le nom de la classe</small>
+					    </div>
+					    
+					   
+						  
+					   <button type="submit" class="btn btn-primary">Submit</button>
+						  
+					</form>
+
+				</div>
+				
+			</div>
+	
+		</div>
+		</div>
+		
+		<!--<div th:replace="fragments/fragments.html :: scripts"></div>-->
+		
+	</body>
+</html>

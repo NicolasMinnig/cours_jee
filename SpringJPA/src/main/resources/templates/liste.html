@@ -9,12 +9,15 @@
 			<tr>
 				<th scope="col">Nom</th>
 				<th scope="col">Prenom</th>
+				<th scope="col">Date de naissance</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr th:each="person: ${persons}">
-				<td th:text="${person.first}"></th>
-				<td th:text="${person.last}"></th>
+				<td th:text="${person.first}"></td>
+				<td th:text="${person.last}"></td>
+				<td th:text="${person.birthDate}"></td>
+				<td> <button th:href="@{/detail/${person.id}}">Show</button> </td>
 			</tr>
 		</tbody>
 		</table>

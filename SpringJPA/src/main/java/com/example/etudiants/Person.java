@@ -13,13 +13,16 @@ public class Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private Integer id;
+	private Long id;
 	
 	@Column
 	private String first;
 	
 	@Column
 	private String last;
+	
+	@Column
+	private String birthDate;
 	
 	public Person() {
 		
@@ -41,11 +44,17 @@ public class Person {
 		this.last = last;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 	
+	public String getBirthDate() {
+		return birthDate;
+	}
 	
+	public void setBirthDate(String date) {
+		birthDate=date;
+	}
 	
 	
 
